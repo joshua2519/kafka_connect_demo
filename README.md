@@ -34,8 +34,7 @@ docker exec -it mysql mysql -uroot -pdebezium -e 'insert into inventory.products
 ```
 
 關閉 connect worker
-確認目前task是在哪台work，關閉後等30秒，task會指派到另一個worker
-因為 scheduled.rebalance.max.delay.ms=30000
+確認目前task是在哪台work，關閉後稍等幾秒，task會指派到另一個worker
 ```
 curl http://localhost:8084/connectors/inventory-connector/status
 
@@ -50,7 +49,7 @@ curl http://localhost:8083/connectors/inventory-connector/status
 ```
 
 刪除 connector
-```aiignore
+```
 curl -X DELETE http://localhost:8084/connectors/inventory-connector
 
 ```
