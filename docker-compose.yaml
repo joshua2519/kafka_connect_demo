@@ -48,7 +48,7 @@ services:
       - STATUS_STORAGE_TOPIC=connect-demo_status
       - KEY_CONVERTER=org.apache.kafka.connect.json.JsonConverter
       - VALUE_CONVERTER=org.apache.kafka.connect.json.JsonConverter
-      - CONNECT_CHEDULED_REBALANCE_MAX_DELAY_MS=30000
+      - CONNECT_SCHEDULED_REBALANCE_MAX_DELAY_MS=30000
   connect-2:
     image: quay.io/debezium/connect:3.2
     ports:
